@@ -36,8 +36,6 @@ class Observer {
           console.log("监听到数据的变化");
           value = newValue;
 
-          // 如果给属性赋值的新值又是一个对象, 那么也需要给这个对象的所有属性添加get/set方法
-          this.observer(newValue);
           dep.notify();
         }
       },
